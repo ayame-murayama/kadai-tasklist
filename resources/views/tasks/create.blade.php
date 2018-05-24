@@ -4,6 +4,8 @@
 
 <h1>タスク新規入力ページ</h1>
 
+
+
     {!! Form::model($task, ['route' => 'tasks.store']) !!}
 
         {!! Form::label('content', 'タスク:') !!}

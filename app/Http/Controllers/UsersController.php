@@ -32,7 +32,9 @@ class UsersController extends Controller
         ];
 
         $data += $this->counts($user);
-
+        if(\Auth::user()->id ===$task->user_id)
         return view('users.show', $data);
+        else{
+            return view('welcome');}
     }
 }

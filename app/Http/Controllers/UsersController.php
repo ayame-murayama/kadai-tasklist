@@ -12,9 +12,14 @@ class UsersController extends Controller
     {
         $users = User::paginate(10);
         
+        if(\Auth::user()->id ===$task->user_id)
+        
         return view('users.index', [
             'users' => $users,
         ]);
+        
+       else{
+            return view('welcome');}
     }
     public function show($id)
     {
